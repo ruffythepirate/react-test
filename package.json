@@ -4,14 +4,14 @@
   "description": "This is a test setup of react that is used for learning.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "dev": "webpack -d --watch",
+    "build": "webpack -p",
+    "elint": "eslint ./src/client/app — ext .js — ext .jsx — cache || true",
+    "elint:table": "eslint ./src/client/app — ext .js — ext .jsx — cache — format table || true",
+    "elint:summary": "eslint ./src/client/app — ext .js — ext .jsx — cache — format 'node_modules/eslint-friendly-formatter' || true"
   },
   "author": "Ruffy the pirate",
   "license": "ISC",
-  "scripts": {
-    "dev": "webpack -d --watch",
-    "build" : "webpack -p"
-  },
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -20,5 +20,12 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "webpack": "^3.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
   }
 }
